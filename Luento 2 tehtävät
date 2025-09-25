@@ -1,1 +1,36 @@
+#Weather station with backend ########
 
+import network
+import time
+import urequests
+
+print("Connecting to WiFi", end="")
+sta_if = network.WLAN(network.STA_IF)
+sta_if.active(True)
+sta_if.connect('Wokwi-GUEST', '')
+while not sta_if.isconnected():
+  print(".", end="")
+  time.sleep(0.1)
+print(" Connected!")
+
+import dht
+sensor = dht.DHT22(Pin(15))
+sensor.measure()
+humidity = sensor.humidity()
+temp = sensor.temperature()
+while True:
+    try:
+        sensor.measure()
+        humidity = sensor.humidity()
+        temp = sensor.temperature()
+        thingspeak_http = f'https://api.thingspeak.com/update?api_key=YYPARV08W65L9LHS&field1={temp}&field2={humidity}'
+        response = urequests.get(thingspeak_http)
+        response.close()
+        time.sleep(15)
+        except Exception as e:
+        print("Error:", e)
+    Time.sleep(15)
+
+
+
+#Weather station with backend ########
