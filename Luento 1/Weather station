@@ -1,0 +1,6 @@
+import dht
+sensor = dht.DHT22(Pin(15))
+sensor.measure()
+humidity = sensor.humidity()
+temp = sensor.temperature()
+print(f"temperature is {temp} Degrees\nHumidity is: {humidity}%")
