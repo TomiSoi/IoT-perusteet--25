@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>WebSocket Server Example</title>
+</head>
+<body>
+    <h1>WebSocket Harjoitus</h1>
+    <input id="msg"></input>
+    <button onclick="sendMessage()">Send</button>
+    <div id="log"></div>
+</body>
+<script>
+    const socket = new WebSocket('ws://localhost:8080');
+    socket.onopen = () => {
+        document.getElementById('log').innerText += 'Connected to server\n';
+    };
+    socket.onmessage = event => {
+        document.getElementById('log').innerText += 'server: ' + event.data + '\n';
+    };
+    function sendMessage() {
+        const msg = document.getElementById('msg').value;
+        socket.send(msg);
+    }
+</script>
+</html>
