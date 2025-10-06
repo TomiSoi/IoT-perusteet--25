@@ -1,0 +1,21 @@
+{
+  "name": "iot-perusteet--25",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomiSoi/IoT-perusteet--25/blob/main/Luento%202%20teht%C3%A4v%C3%A4t"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.18.3"
+  }
+}
