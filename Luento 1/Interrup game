@@ -1,0 +1,18 @@
+led = Pin(15, Pin.OUT)
+button = Pin(14, Pin.IN, Pin.PULL_DOWN)
+
+def reaction():
+    start = time.ticks_ms()
+    while button.value() == 0:
+        pass
+    end = time.ticks_ms()
+    return time.ticks_diff(end, start)
+
+while True:
+    led.value(True)
+    time.sleep(urandom.randint(1,4))
+    led.value(False)
+    reaction_time = reaction()
+    print(f"Reaction time: {reaction_time}ms")
+    print("Next round in 5 seconds...")
+    time.sleep(5)
