@@ -9,3 +9,6 @@ Server.js: Node.js/Express-palvelin, joka lähettää viestejä Discord-webhooki
 fetch_temperature.html: HTML-tiedosto lämpötiladatan visualisointiin.
 fetch_temperature.js: JavaScript-koodi, joka hakee lämpötiladataa ThingSpeakistä ja piirtää sen Google Charts -käyränä (päivitys 60 sekunnin välein).
 
+Wokwi Setup:
+
+<img width="572" height="616" alt="Sensor   Pico" src="https://github.com/user-attachments/assets/a669d62c-91c9-4081-a21d-909c061a362e" />
