@@ -1,13 +1,13 @@
-IoT-Perusteet: Lämpötila-anturin pipeline
+# IoT-Perusteet: Lämpötila-anturin pipeline
 
 Tämä repositorio sisältää IoT-Perusteet-kurssilla kehitetyn lämpötila-anturin pipelinen koodin ja viikkotehtävät. Projekti toteuttaa kokonaisen IoT-pipelinen Wokwi Pico -simulaattorilla, 
 joka kerää ja lähettää lämpötiladataa ThingSpeakiin, visualisoi sen selainpohjaisella käyttöliittymällä ja sisältää Discord-ilmoitukset.
 
-Sisältö:
-Viikkotehtävät omissa kansioissaan.
-Server.js: Node.js/Express-palvelin, joka lähettää viestejä Discord-webhookiin /notify-päätepisteen kautta.
-fetch_temperature.html: HTML-tiedosto lämpötiladatan visualisointiin.
-fetch_temperature.js: JavaScript-koodi, joka hakee lämpötiladataa ThingSpeakistä ja piirtää sen Google Charts -käyränä (päivitys 60 sekunnin välein).
+##Sisältö:
+- **`Viikkotehtävät omissa kansioissaan.
+- **`Server.js: Node.js/Express-palvelin, joka lähettää viestejä Discord-webhookiin /notify-päätepisteen kautta.
+- **`fetch_temperature.html: HTML-tiedosto lämpötiladatan visualisointiin.
+- **`fetch_temperature.js: JavaScript-koodi, joka hakee lämpötiladataa ThingSpeakistä ja piirtää sen Google Charts -käyränä (päivitys 60 sekunnin välein).
 
 Wokwi Setup:
 
